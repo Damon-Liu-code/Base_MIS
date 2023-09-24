@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>MIS系统</title>
+    <link rel="stylesheet" type="text/css" href="/jquery-easyui-1.3.3/themes/scientific/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/jquery-easyui-1.3.3/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <script type="text/javascript" src="/jquery-easyui-1.3.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/jquery-easyui-1.3.3/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+</head>
+<body class="easyui-layout">
+<form id="formindex">
+    <!-- begin of header -->
+    <div class="easy-header" data-options="region:'north',border:false,split:true">
+        <div class="easy-header-left">
+            <img width="180px" style="left: 0" alt="logo" src="/images/logo.png">
+        </div>
+        <div class="easy-header-left-2">
+            <h1>MIS高效开发框架</h1>
+        </div>
+        <div class="easy-header-right">
+            <p><strong class="easyui-tooltip"><span id="username"></span></strong></p>
+            <input type="button" onclick="logout()" value="登 出">
+        </div>
+    </div>
+    <!-- end of header -->
+
+    <!-- begin of sidebar -->
+    <div class="easy-sidebar" data-options="region:'west',split:true,border:true,title:'导航菜单'" style="width:200px;">
+        <div class="easyui-accordion" data-options="border:false,fit:true" style="overflow-y:auto;">
+            <ul class="easyui-tree easy-side-tree" id="easy-side-tree">
+            </ul>
+        </div>
+    </div>
+    <!-- end of sidebar -->
+
+    <!-- begin of main -->
+    <div class="easy-main" data-options="region:'center'">
+        <div id="easy-tabs" class="easyui-tabs" data-options="border:false,fit:true">
+            <!-- <div title="主页" data-options="href:'',closable:false,iconCls:'icon-tip',cls:'pd3'"></div>-->
+            <div title="首页" data-options="iconCls:'icon-home'">
+                <div align="center" style="padding-top: 200px"><font color="#ffffff" size="10">欢迎您使用本系统！</font>
+                </div>
+                <div align="center" style="padding-top: 100px">
+                    <SCRIPT>setInterval("clock.innerHTML=new Date().toLocaleString()+'&nbsp;&nbsp;'+''.charAt(new Date().getDay());", 1000)</SCRIPT>
+                    <font size=10 color="#ffffff"><SPAN id=clock></SPAN></font></div>
+            </div>
+        </div>
+
+    </div>
+    <!-- end of main -->
+
+    <!-- begin of footer -->
+    <div class="easy-footer" data-options="region:'south',border:true,split:true">
+        &copy;v 0.0.1
+    </div>
+    <!-- end of footer -->
+
+</form>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.MenuDao">
+    <resultMap type="Menu" id="resultMenuList">
+        <result property="id" column="id"/>
+        <result property="parentid" column="parentid" />
+        <result property="text" column="name" />
+        <result property="iconCls" column="iconCSS" />
+        <result  property="attributes.url" column="page" />
+    </resultMap>
+
+    <select id="getMenuCountFromMySQL" resultType="int">
+        select count(*) from t_menu
+    </select>
+
+    <select id="getMenuDetailFromMySQL" resultType="Menu">
+        select * from t_menu
+    </select>
+
+
+    <select id="isMonthBillMenuExist" parameterType="java.util.Hashtable" >
+        select count(*) from t_menu where name = #{name}
+    </select>
+
+    <insert id="createMonthBillMenu" parameterType="java.util.Hashtable">
+        insert into t_menu
+        (name, page, parentid, show_in_menu, iconCSS, value, display, create_datetime)
+        values
+            (#{name}, #{page}, #{parentid}, #{show_in_menu}, #{iconCSS}, #{value}, #{display}, #{create_datetime})
+    </insert>
+
+    <select id="getMenuList" resultMap="resultMenuList" parameterType="java.util.Hashtable" >
+        select * from t_menu where show_in_menu=1 and display=1 and <![CDATA[value<=#{roleValue}#]]>
+    </select>
+
+    <select id="getEditMenuList" resultType="Menu">
+        select * from t_menu where display=1
+    </select>
+
+    <update id="updateMenuInfo" parameterType="java.util.Hashtable">
+        update t_menu set name=#{name}, value=#{value} where id=#{id}
+    </update>
+
+
+    <select id="getMenuAuthorityValue" resultType="int">
+        select value from t_menu where page=#{handlerName}
+    </select>
+
+
+    <select id="getMenuSetList" resultType="Menu" >
+        select * from t_menu where show_in_menu=1 and display=1 and colsetauthority='1'
+    </select>
+</mapper>

@@ -1,0 +1,329 @@
+
+body {
+    font: 12px/1.2em Microsoft YaHei;
+}
+
+.indexDate font{
+    color: #ea96cc;
+}
+
+a,
+a:link {
+    color: #000;
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #39f;
+}
+
+.pd3 {
+    padding: 3px;
+}
+
+.pd3 div {
+    overflow: hidden;
+}
+
+.pd5 {
+    padding: 5px;
+}
+
+.pd10 {
+    padding: 10px;
+}
+
+label,
+button,
+input,
+select,
+textarea {
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+input,
+button,
+select,
+textarea {
+    font: 12px/1.2em Microsoft YaHei;
+}
+
+select,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.signout {
+    background: rgba(0, 0, 0, 0);
+    color: #fff;
+    border: 0px;
+}
+
+.tabs-tool {
+    border-top: 0;
+}
+
+.easy-text,
+.easy-textarea {
+    padding: 3px;
+    border: 1px #95B8E7 solid;
+    width: 260px;
+}
+
+.easy-text {
+    height: 14px;
+    line-height: 14px;
+}
+
+.easy-radio {
+    height: 14px;
+    line-height: 14px;
+    width: 100px;
+    float: left;
+    text-align: left;
+}
+
+.easy-header {
+    height: 80px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    border-bottom: 1px #95b8e7 solid;
+    background: #E0ECFF;
+}
+
+.easy-header-left {
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 0;
+}
+
+.easy-header-left-2 {
+    position: absolute;
+    z-index: 1;
+    left: 200px;
+    top: 0;
+}
+
+.easy-header-left-2 h1 {
+    font: 20px/50px Verdana;
+    color: #000000;
+}
+
+.easy-header-left h1 {
+    font: 20px/20px Verdana;
+    color: #000000;
+}
+
+.easy-header-right {
+    position: absolute;
+    z-index: 1;
+    right: 5px;
+    top: 0;
+    color: #000000;
+    text-align: right;
+}
+
+.easy-header-right p {
+    line-height: 0.7em;
+}
+
+.easy-header-right a {
+    color: #000000;
+    margin: 0 5px;
+}
+
+.easy-sidebar {
+    width: 160px;
+}
+
+.easy-side-tree .tree-node {
+    padding: 3px 0px;
+}
+
+.easy-side-tree a {
+    display: block;
+}
+
+.easy-side-tree .tree-node-selected {
+    padding: 2px 0;
+    border: 1px #fade23 solid;
+}
+
+.easy-toolbar-button,
+.easy-toolbar-search {
+    padding: 3px 5px;
+}
+
+.easy-footer {
+    height: 20px;
+    padding: 5px;
+    text-align: center;
+    overflow: hidden;
+    background: #E0ECFF;
+}
+
+.w200 {
+    width: 200px;
+}
+
+.w220 {
+    width: 220px;
+}
+
+.w250 {
+    width: 250px;
+}
+
+.adduserwidth {
+    width: 196px;
+}
+
+.easy-editText {
+    width: 222px;
+    height: 22px;
+}
+
+.easy-editMonthText {
+    width: 100px;
+    height: 22px;
+}
+
+
+.easy-BackRestoreDB {
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.datagrid-mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #ccc;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    display: none;
+}
+
+.datagrid-mask-msg {
+    position: absolute;
+    left: 100px;
+    top: 50px;
+    width: auto;
+    height: 16px;
+    padding: 12px 5px 10px 30px;
+    background: #fff no-repeat scroll 5px 10px;
+    border: 2px solid #ccc;
+    color: #222;
+    display: none;
+}
+
+.datagrid-search {
+    display: inline-block;
+    margin: 5px auto 5px 15px;
+}
+
+.datagrid-advance-search {
+    display: inline-block;
+    margin: 5px 10px 5px 15px;
+}
+
+
+.w60 {
+    width: 60px;
+}
+
+.w80 {
+    width: 80px;
+}
+
+.w96 {
+    width: 96px;
+}
+
+.w100 {
+    width: 100px;
+}
+
+.w120 {
+    width: 120px
+}
+
+.w130 {
+    width: 130px;
+}
+
+.w140 {
+    width: 140px;
+}
+
+.w148 {
+    width: 148px;
+}
+
+.w150 {
+    width: 150px;
+}
+
+.w160 {
+    width: 160px;
+}
+
+.fl {
+    float: left;
+}
+
+.advance-search-div {
+    height: 30px;
+    vertical-align: top;
+    margin-right: 18px;
+}
+
+.advance-search-div label {
+    display: inline-block;
+    margin: 0 0 5px 0;
+    font-size: 10px;
+    width: 60px
+}
+
+.advance-search-div input {
+    margin: 0 0 5px 0;
+    font-size: 10px;
+    width: 60px;
+}
+
+.advance-search-datebox {
+    margin: 0 18px 5px 0;
+}
+
+
+.datagrid-header-row td {
+    background-color: #e0ecff;
+    color: #fff
+}
+
+.fl {
+    float: left
+}
+
+.directorTabHeigt {
+    height: calc(100% - 8px);
+    height: -webkit-calc(100% - 16px);
+    height: -moz-calc(100% - 16px);
+}
+
+.ml10 {
+    margin-left: 10px;
+}

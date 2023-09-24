@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.RoleDao">
+
+    <select id="getRoleTotal" resultType="int">
+        select count(*)
+        from t_role
+    </select>
+
+    <select id="getRoleDetail" parameterType="Map" resultType="Role">
+        select *
+        from t_role
+        order by roleNumber desc
+    </select>
+
+    <insert id="addRole" parameterType="Role">
+        insert into t_role(roleName, roleNumber)
+        values (#{roleName}, #{roleNumber});
+    </insert>
+
+    <update id="updateRoleInfo" parameterType="java.util.Hashtable">
+        update t_role
+        set roleName=#{roleName},
+            roleNumber=#{roleNumber}
+        where id = #{id}
+    </update>
+
+    <delete id="deleteRole" parameterType="Integer">
+        delete
+        from t_role
+        where id = #{id}
+    </delete>
+
+    <select id="getRoleNameById" resultType="String">
+        select roleName
+        from t_role
+        where id = #{id}
+    </select>
+
+
+</mapper>

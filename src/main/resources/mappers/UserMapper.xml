@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.UserDao">
+
+    <select id="login" parameterType="User" resultType="User">
+        SELECT t_user.*, t_role.roleNumber
+        FROM t_user
+                 LEFT JOIN t_role ON t_user.roleName = t_role.roleName
+        where t_user.userName = #{userName}
+          and t_user.password = #{password}
+    </select>
+
+    <update id="changePwd" parameterType="User">
+        update t_user
+        <set>
+            <if test="password!=null and password!='' ">
+                password=#{password},
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+
+    <select id="getUserTotal" resultType="int">
+        select count(*)
+        from t_user
+    </select>
+
+    <select id="getUserDetail" parameterType="Map" resultType="User">
+        select * from t_user
+        <where>
+            <if test="userName!=null and userName!='' ">
+                and userName like #{userName}
+            </if>
+            <if test="trueName!=null and trueName!='' ">
+                and trueName like #{trueName}
+            </if>
+            <if test="email!=null and email!='' ">
+                and email like #{email}
+            </if>
+        </where>
+        <if test="start!=null and size!=null">
+            limit #{start},#{size}
+        </if>
+    </select>
+
+
+    <insert id="addUser" parameterType="User">
+        insert into t_user(userName, trueName, email, password, phone, roleName)
+        values (#{userName}, #{trueName}, #{email}, #{password}, #{phone}, #{roleName});
+    </insert>
+
+    <update id="updateUser" parameterType="User">
+        update t_user
+        <set>
+            <if test="userName!=null and userName!='' ">
+                userName=#{userName},
+            </if>
+            <if test="trueName!=null and trueName!='' ">
+                trueName=#{trueName},
+            </if>
+            <if test="email!=null and email!='' ">
+                email=#{email},
+            </if>
+            <if test="password!=null and password!='' ">
+                password=#{password},
+            </if>
+            <if test="phone!=null and phone!='' ">
+                phone=#{phone},
+            </if>
+            <if test="roleName!=null and roleName!='' ">
+                roleName=#{roleName},
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+
+    <delete id="deleteUser" parameterType="Integer">
+        delete
+        from t_user
+        where id = #{id}
+    </delete>
+
+    <update id="updateUserRole" parameterType="User">
+        update t_user
+        <set>
+            <if test="roleName!=null and roleName!='' ">
+                roleName=#{roleName},
+            </if>
+        </set>
+        where roleName=#{old_roleName}
+    </update>
+
+</mapper>

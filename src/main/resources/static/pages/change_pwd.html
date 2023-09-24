@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>修改密码</title>
+    <link rel="stylesheet" type="text/css" href="/jquery-easyui-1.3.3/themes/scientific/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/jquery-easyui-1.3.3/themes/icon.css">
+    <script type="text/javascript" src="/jquery-easyui-1.3.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/jquery-easyui-1.3.3/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="/jquery-easyui-1.3.3/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="/jquery-easyui-1.3.3/jquery.edatagrid.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/change_pwd.js"></script>
+</head>
+<body>
+<div id="change-pwd-panel" class="easyui-panel" title=""
+     style="width: 600px; height: 450px; padding: 10px; background-color: transparent;"
+     data-options="iconCls:'icon-pwd', collapsible: false">
+    <div class="Subhead">
+        <h2 class="Subhead-heading" style="">修改密码</h2>
+    </div>
+    <form id="change_password" class="edit_user">
+        <dl class="form-group password-confirmation-form">
+            <dt>
+                <label for="user_old_password" style="">输入旧密码</label>
+            </dt>
+            <dd>
+                <input type="password" name="user_old_password" id="user_old_password" tabindex="2" required="required"
+                       class="form-control" style=" background-color: transparent;">
+            </dd>
+        </dl>
+        <dl class="form-group password-confirmation-form">
+            <dt>
+                <label for="user_new_password" style="">输入新密码</label>
+            </dt>
+            <dd>
+                <input type="password" name="user_new_password" id="user_new_password" tabindex="2" required="required"
+                       class="form-control" style=" background-color: transparent;">
+            </dd>
+        </dl>
+        <dl class="form-group password-confirmation-form">
+            <dt>
+                <label for="user_confirm_new_password" style="">确认新密码</label>
+            </dt>
+            <dd>
+                <input type="password" name="user_confirm_new_password" id="user_confirm_new_password" tabindex="2"
+                       required="required" class="form-control" style=" background-color: transparent;">
+            </dd>
+        </dl>
+        <p>
+            <input type="button" id="submitBtn" class="btn mr-2" onclick="changepwd()" value="确认更新密码"
+                   style=" background-color: transparent;">
+        </p>
+    </form>
+</div>
+
+
+</body>
+</html>

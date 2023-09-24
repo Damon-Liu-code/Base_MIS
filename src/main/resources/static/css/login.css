@@ -1,0 +1,55 @@
+body {
+    background-color: #f2f2f2;
+}
+
+.login-container {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 150px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.login-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.login-form input.easyui-textbox {
+    width: 100%;
+    height: 30px;
+    font-size: 14px;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-form .submit-btn {
+    margin-top: 20px;
+    width: 100%;
+    height: 34px;
+    font-size: 16px;
+    background-color: #337ab7;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-form .submit-btn:hover {
+    background-color: #23527c;
+}
