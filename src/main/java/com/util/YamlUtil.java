@@ -1,13 +1,11 @@
 package com.util;
 
-import org.apache.log4j.Logger;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.InputStream;
 import java.util.Map;
 
 public class YamlUtil {
-    private static final Logger log = Logger.getLogger(YamlUtil.class);
     private static final String YAML_FILE_PATH = "application-dev.yml";
     private static Map<String, Object> yamlData;
     

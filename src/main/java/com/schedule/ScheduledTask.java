@@ -1,7 +1,6 @@
 package com.schedule;
 
 import org.apache.log4j.Logger;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 @Component
